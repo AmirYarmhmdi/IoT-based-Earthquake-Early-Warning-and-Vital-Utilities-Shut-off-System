@@ -1,4 +1,5 @@
 # 🌐 IoT-based Earthquake Early Warning and Vital Utilities Shut-off System
+
 This project implements an **IoT-based earthquake early warning system** that not only detects earthquakes but also **automatically shuts off critical utilities** such as electricity, gas, and water. The system is fully configurable and monitorable via the **Telegram bot** `@EEWiotbot`.
 
 ---
@@ -8,11 +9,11 @@ This project implements an **IoT-based earthquake early warning system** that no
 The system consists of the following components:
 
 ### 1. Sensors
-- Digital accelerometers and analog geophones.  
+- Digital accelerometers (e.g., ADXL345 via I2C) and analog geophones.  
 - Sensors publish data in **SenML format** to MQTT topics.
 
 ### 2. Message Broker (MQTT)
-- A broker such as **HiveMQ** is used to handle communication between sensors, the controller, and actuators.
+- A broker such as **HiveMQ** is used to handle communication between sensors, controller, and actuators.
 
 ### 3. Controller
 - Subscribes to sensor topics.  
@@ -80,12 +81,12 @@ SERVICES = [
 **Execution sequence:**  
 1. `Data Catalog`  
 2. `Static Web Service`  
-3. Sensors: `Accelerometer`, `Velocity Sensor`  
+3. Sensors: `Accelerometer` → `Velocity Sensor`  
 4. `Controller`  
-5. Actuators: `Buzzer Alarm`, `Flashing Light`, `Electricity/Gas/Water Cutoff`  
+5. Actuators: `Buzzer Alarm` → `Flashing Light` → `Electricity/Gas/Water Cutoff`  
 6. `Telegram Bot`
 
-After running `main.py`, you can fully configure and monitor the system using the Telegram bot `@EEWiotbot` and the terminal.
+After running `main.py`, you can fully configure and monitor the system using the Telegram bot `@EEWiotbot`.
 
 ---
 
@@ -125,12 +126,15 @@ python -m test.<module_name>
 - `TEST_fake_velocitymeter.py` – simulate velocity sensor data  
 
 ---
+⚠️ The system has been designed to minimize hardcoding; almost all parameters are configurable through the JSON file. (conf/ -> system_config.json)
+---
 
 ## Directory Structure
 
 ```
 /IoT_Project
 │
+├──/conf/                   # # Configuration folder (system_config.json)
 ├── sensors/                # Accelerometer and velocity sensors
 ├── actuators/              # Buzzer, flashing light, and cut-off actuators
 ├── services/               # Data catalog, web service, controller, Telegram bot
@@ -138,7 +142,11 @@ python -m test.<module_name>
 ├── test/                   # Testing scripts
 ├── main.py                 # Main file to start the entire system
 ├── requirements.txt        # Python dependencies
+└── main.py                 # the nain file that run all files in order
+└── requirements.txt        # the installation requirenments
+└── DiagramـofـUseـCase.jpg # the application diagram.
 └── README.md
+
 ```
 
 ---
@@ -147,11 +155,3 @@ python -m test.<module_name>
 
 - Integration of machine learning algorithms for earthquake detection   
 - Interactive web dashboard for visualizing real-time sensor data  
----
-
-## 👥 Authors
-- **Amir Yarmohamadi** — *S329783*  
-- **Saeideh Mohammadikish** — *S329781*  
-- **Erfan Afshinnia** — *S329945*
-
----
