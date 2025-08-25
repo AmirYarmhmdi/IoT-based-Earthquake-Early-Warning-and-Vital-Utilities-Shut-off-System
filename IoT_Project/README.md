@@ -134,7 +134,7 @@ python -m test.<module_name>
 ```
 /IoT_Project
 │
-├──/conf/                   # # Configuration folder (system_config.json)
+├──/conf/                   # Configuration folder (system_config.json)
 ├── sensors/                # Accelerometer and velocity sensors
 ├── actuators/              # Buzzer, flashing light, and cut-off actuators
 ├── services/               # Data catalog, web service, controller, Telegram bot
