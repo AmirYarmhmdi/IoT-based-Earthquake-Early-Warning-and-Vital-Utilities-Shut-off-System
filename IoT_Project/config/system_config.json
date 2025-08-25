@@ -1,0 +1,17 @@
+{
+"rest": {
+  "catalog": { "host": "127.0.0.1", "port": 8081 },
+  "web_service": { "host": "127.0.0.1", "port": 8080 }
+}
+,
+  "mqtt": {
+    "broker": { "host": "broker.hivemq.com", "port": 1883 }
+  },
+  "thresholds": {
+    "Acceleration": { "Warning": 5, "EQ_Cutoff": 15 },
+    "Velocity": { "Warning": 10, "EQ_Cutoff": 20 }
+  },
+  "TOKEN": "7442455825:AAHLYHoVjZSyN3drhCcVsjvaf18xoHwvr34",
+  "sensor_interval": 0.01,
+  "EQ_time_check" : 0.3
+}

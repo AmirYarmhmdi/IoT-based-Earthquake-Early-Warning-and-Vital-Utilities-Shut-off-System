@@ -1,0 +1,171 @@
+{
+  "project": {
+    "name": "IoT-based Earthquake Early Warning and Vital Utilities Shut-off System",
+    "version": "1.0",
+    "developers": [
+      "Amir Yarmohamadi",
+      "Saeideh Mohammadikish",
+      "Erfan Afshinnia"
+    ]
+  },
+  "topics": [
+    "alarms/flashing_light/Building_A/Fla_3b0a1260-a0e2-48f6-bc1a-0f86b2f74d52",
+    "EQ_WARNING/Central_Unit/Con_94322eed-a696-47bb-8b30-1cc000489534",
+    "sensors/accelerometer/Building_A/Acc_7f397f59-cc48-4f14-b208-39d13cf34cf7",
+    "cutoffs/water/Building_A/WaC_b63175d8-242b-4714-8de4-5f32de3a8be9",
+    "sensors/velocity/Virtual_Unit/Vel_cdab4e12-3f45-4d51-bfdd-e5455312d3d7",
+    "alarms/buzzer/Building_A/Buz_d9162146-2ec0-43b1-bc15-1ec01a1af251",
+    "cutoffs/electricity/Building_A/ElC_d1b53ced-22cb-4ce8-af99-853c9aaabf63",
+    "Adjust/Central_Unit/Web_d1e1c5bf-e3fe-4b04-8641-39bc2925fafd",
+    "sensors/accelerometer/Virtual_Unit/Acc_e358398d-f0d5-4a11-9c6b-149ec4cbc9a4",
+    "sensors/accelerometer/Building_A/Acc_f8525ef7-f0b5-4e6a-9e37-c2b2b1bf9d40",
+    "Tbot/Central_Unit/Tel_f53cc04a-988c-4be0-9f8b-bbd62be72093",
+    "cutoffs/gas/Building_A/GaC_b0b14fc3-3f20-4d7f-aaf9-3765ef769756",
+    "sensors/velocity/Virtual_Unit/Vel_335a4130-f9b5-4363-9ad2-a81b2b8d8ef6",
+    "sensors/velocity/Building_A/Vel_44c3a2aa-e724-4672-977d-e4f9472d3c8d"
+  ],
+  "thresholds": {
+    "Acceleration": {
+      "Warning": 5,
+      "EQ_Cutoff": 15
+    },
+    "Velocity": {
+      "Warning": 10,
+      "EQ_Cutoff": 20
+    }
+  },
+  "devices": {
+    "Web_d1e1c5bf-e3fe-4b04-8641-39bc2925fafd": {
+      "type": "Static_Web_Service",
+      "building": "Central_Unit",
+      "location": {
+        "latitude": "Central_Unit",
+        "longitude": "Central_Unit"
+      },
+      "topic": "Adjust/Central_Unit/Web_d1e1c5bf-e3fe-4b04-8641-39bc2925fafd"
+    },
+    "Con_94322eed-a696-47bb-8b30-1cc000489534": {
+      "type": "Controller",
+      "building": "Central_Unit",
+      "location": {
+        "latitude": "Central_Unit",
+        "longitude": "Central_Unit"
+      },
+      "topic": "EQ_WARNING/Central_Unit/Con_94322eed-a696-47bb-8b30-1cc000489534"
+    },
+    "Tel_f53cc04a-988c-4be0-9f8b-bbd62be72093": {
+      "type": "Telegram_Bot",
+      "building": "Central_Unit",
+      "location": {
+        "latitude": "Central_Unit",
+        "longitude": "Central_Unit"
+      },
+      "topic": "Tbot/Central_Unit/Tel_f53cc04a-988c-4be0-9f8b-bbd62be72093"
+    },
+    "Acc_7f397f59-cc48-4f14-b208-39d13cf34cf7": {
+      "type": "Accelerometer_Sensor",
+      "building": "Building_A",
+      "location": {
+        "latitude": 45,
+        "longitude": 7
+      },
+      "topic": "sensors/accelerometer/Building_A/Acc_7f397f59-cc48-4f14-b208-39d13cf34cf7"
+    },
+    "Acc_f8525ef7-f0b5-4e6a-9e37-c2b2b1bf9d40": {
+      "type": "Accelerometer_Sensor",
+      "building": "Building_A",
+      "location": {
+        "latitude": 45,
+        "longitude": 7
+      },
+      "topic": "sensors/accelerometer/Building_A/Acc_f8525ef7-f0b5-4e6a-9e37-c2b2b1bf9d40"
+    },
+    "GaC_b0b14fc3-3f20-4d7f-aaf9-3765ef769756": {
+      "type": "GasCutoff",
+      "building": "Building_A",
+      "location": {
+        "latitude": 45,
+        "longitude": 7
+      },
+      "topic": "cutoffs/gas/Building_A/GaC_b0b14fc3-3f20-4d7f-aaf9-3765ef769756"
+    },
+    "Buz_d9162146-2ec0-43b1-bc15-1ec01a1af251": {
+      "type": "Buzzer",
+      "building": "Building_A",
+      "location": {
+        "latitude": 45,
+        "longitude": 7
+      },
+      "topic": "alarms/buzzer/Building_A/Buz_d9162146-2ec0-43b1-bc15-1ec01a1af251"
+    },
+    "Fla_3b0a1260-a0e2-48f6-bc1a-0f86b2f74d52": {
+      "type": "FlashingLight",
+      "building": "Building_A",
+      "location": {
+        "latitude": 45,
+        "longitude": 7
+      },
+      "topic": "alarms/flashing_light/Building_A/Fla_3b0a1260-a0e2-48f6-bc1a-0f86b2f74d52"
+    },
+    "ElC_d1b53ced-22cb-4ce8-af99-853c9aaabf63": {
+      "type": "ElectricityCutoff",
+      "building": "Building_A",
+      "location": {
+        "latitude": 45,
+        "longitude": 7
+      },
+      "topic": "cutoffs/electricity/Building_A/ElC_d1b53ced-22cb-4ce8-af99-853c9aaabf63"
+    },
+    "WaC_b63175d8-242b-4714-8de4-5f32de3a8be9": {
+      "type": "WaterCutoff",
+      "building": "Building_A",
+      "location": {
+        "latitude": 45,
+        "longitude": 7
+      },
+      "topic": "cutoffs/water/Building_A/WaC_b63175d8-242b-4714-8de4-5f32de3a8be9"
+    },
+    "Vel_44c3a2aa-e724-4672-977d-e4f9472d3c8d": {
+      "type": "Velocity_Sensor",
+      "building": "Building_A",
+      "location": {
+        "latitude": 45,
+        "longitude": 7
+      },
+      "topic": "sensors/velocity/Building_A/Vel_44c3a2aa-e724-4672-977d-e4f9472d3c8d"
+    },
+    "Acc_e358398d-f0d5-4a11-9c6b-149ec4cbc9a4": {
+      "type": "Accelerometer_Sensor",
+      "building": "Virtual_Unit",
+      "location": {
+        "latitude": "fake",
+        "longitude": "fake"
+      },
+      "topic": "sensors/accelerometer/Virtual_Unit/Acc_e358398d-f0d5-4a11-9c6b-149ec4cbc9a4"
+    },
+    "Vel_cdab4e12-3f45-4d51-bfdd-e5455312d3d7": {
+      "type": "Velocity_Sensor",
+      "building": "Virtual_Unit",
+      "location": {
+        "latitude": "fake",
+        "longitude": "fake"
+      },
+      "topic": "sensors/velocity/Virtual_Unit/Vel_cdab4e12-3f45-4d51-bfdd-e5455312d3d7"
+    },
+    "Vel_335a4130-f9b5-4363-9ad2-a81b2b8d8ef6": {
+      "type": "Velocity_Sensor",
+      "building": "Virtual_Unit",
+      "location": {
+        "latitude": "fake",
+        "longitude": "fake"
+      },
+      "topic": "sensors/velocity/Virtual_Unit/Vel_335a4130-f9b5-4363-9ad2-a81b2b8d8ef6"
+    }
+  },
+  "Buildings": [
+    "Central_Unit",
+    "Building_A",
+    "Virtual_Unit"
+  ],
+  "System_Status": "Monitoring"
+}
