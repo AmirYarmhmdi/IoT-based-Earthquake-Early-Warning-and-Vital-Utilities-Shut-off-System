@@ -9,7 +9,7 @@ This project implements an **IoT-based earthquake early warning system** that no
 The system consists of the following components:
 
 ### 1. Sensors
-- Digital accelerometers (e.g., ADXL345 via I2C) and analog geophones.  
+- Digital accelerometers and geophones.  
 - Sensors publish data in **SenML format** to MQTT topics.
 
 ### 2. Message Broker (MQTT)
