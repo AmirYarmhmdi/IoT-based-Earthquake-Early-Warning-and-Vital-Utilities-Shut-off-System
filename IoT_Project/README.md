@@ -111,11 +111,14 @@ python -m services.telegram_bot
 
 ## Testing
 
-A `test/` folder is included for testing purposes. All test modules can also be run independently using:
-
+There is a `test/` folder for checking different parts of the system. All test modules can also be run independently using:
 ```bash
 python -m test.<module_name>
 ```
+After running main.py, you can use test scripts to add devices, and then you can use a test script to remove some of them.
+To get sensor outputs, there is a subscribe test file that shows the incoming sensor values.
+For threshold checking (accelerometer and velocity), two test files are provided where you can feed custom values and verify the behavior. Earthquake alerts and system performance can also be viewed in the terminal.
+Note: the same flow can also be done through the Telegram bot.
 
 **Available test modules:**
 
