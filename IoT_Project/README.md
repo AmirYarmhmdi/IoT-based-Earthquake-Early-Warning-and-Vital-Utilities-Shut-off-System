@@ -131,6 +131,15 @@ Note: the same flow can also be done through the Telegram bot.
 ---
 ⚠️ The system has been designed to minimize hardcoding; almost all parameters are configurable through the JSON file. (conf/ -> system_config.json)
 ---
+Configurable Parameters:
+
+REST Endpoints – IP and port of Data Catalog and Web Service
+MQTT Broker – Host and port of the MQTT broker
+Thresholds – Warning and cut-off levels for acceleration and velocity
+Telegram Bot Token – API token for the system bot
+Sensor Interval – Time interval for sensor data publishing (in seconds)
+EQ_time_check – Time window for earthquake detection logic
+⚠️ Make sure to update the TOKEN field with your own Telegram bot token before running the system.
 
 ## Directory Structure
 
