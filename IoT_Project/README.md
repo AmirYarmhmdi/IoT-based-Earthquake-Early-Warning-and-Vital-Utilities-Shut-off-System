@@ -166,10 +166,3 @@ EQ_time_check – Time window for earthquake detection logic
 └── README.md
 
 ```
-
----
-
-## Future Enhancements
-
-- Integration of machine learning algorithms for earthquake detection   
-- Interactive web dashboard for visualizing real-time sensor data  
