@@ -158,11 +158,9 @@ EQ_time_check – Time window for earthquake detection logic
 ├── services/               # Data catalog, web service, controller, Telegram bot
 ├── utils/                  # Reusable utility modules
 ├── test/                   # Testing scripts
-├── main.py                 # Main file to start the entire system
-├── requirements.txt        # Python dependencies
-└── main.py                 # the nain file that run all files in order
-└── requirements.txt        # the installation requirenments
-└── DiagramـofـUseـCase.jpg # the application diagram.
+├── main.py                 # Main file to start the entire system in order
+├── requirements.txt        # the installation requirements
+├── DiagramـofـUseـCase.jpg # the application diagram.
 └── README.md
 
 ```
