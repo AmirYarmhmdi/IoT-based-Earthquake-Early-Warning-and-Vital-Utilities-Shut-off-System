@@ -11,7 +11,8 @@
     "Acceleration": { "Warning": 5, "EQ_Cutoff": 15 },
     "Velocity": { "Warning": 10, "EQ_Cutoff": 20 }
   },
-  "TOKEN": "7442455825:AAHLYHoVjZSyN3drhCcVsjvaf18xoHwvr34",
+  "TOKEN": "Enter your telegram bot API key!",
   "sensor_interval": 0.01,
   "EQ_time_check" : 0.3
+
 }
