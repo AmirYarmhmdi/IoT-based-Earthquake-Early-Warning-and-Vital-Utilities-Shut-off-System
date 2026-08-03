@@ -6,6 +6,9 @@ This project implements an **IoT-based earthquake early warning system** that no
 
 ## Architecture Overview
 
+<img width="823" height="640" alt="Untitled Diagram_1" src="https://github.com/user-attachments/assets/1cc80836-793c-463c-a7e9-f314c0a48b15" />
+
+
 The system consists of the following components:
 
 ### 1. Sensors
