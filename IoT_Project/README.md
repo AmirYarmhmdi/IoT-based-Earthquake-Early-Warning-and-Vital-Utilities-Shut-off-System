@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="IoT_Project/logo.png" alt="Rastin-AI Logo" width="400">
+  <img src="IoT_Project/logo.png" alt="Logo" width="400">
 </div>
 
 # 🌐 IoT-based Earthquake Early Warning and Vital Utilities Shut-off System
