@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="IoT_Project/logo.png" alt="Rastin-AI Logo" width="400">
+</div>
+
 # 🌐 IoT-based Earthquake Early Warning and Vital Utilities Shut-off System
 
 This project implements an **IoT-based earthquake early warning system** that not only detects earthquakes but also **automatically shuts off critical utilities** such as electricity, gas, and water. The system is fully configurable and monitorable via the **Telegram bot** `@EEWiotbot`.
