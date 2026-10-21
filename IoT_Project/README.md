@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./IoT_Project/logo.png" alt="IoT project logo" width="400">
+  <img src="./logo.png" alt="IoT project logo" width="400">
 </p>
 
 # 🌐 IoT-based Earthquake Early Warning and Vital Utilities Shut-off System
